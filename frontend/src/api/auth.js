@@ -4,7 +4,7 @@ const API_BASE = "https://first-node-app-repo.onrender.com";
 
 
 export const registerUser = async (formData) => {
-  const res = await fetch(`${API_BASE}/register`,{
+  const res = await fetch(`${API_BASE}/api/auth/apiregister`,{
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -22,7 +22,7 @@ export const registerUser = async (formData) => {
 };
 
 export const loginUser = async (formData) => {
-  const res = await fetch(`${API_BASE}/login`, {
+  const res = await fetch(`${API_BASE}/api/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
