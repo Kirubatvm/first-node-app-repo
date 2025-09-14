@@ -1,6 +1,7 @@
 // src/api/auth.js
 const API_BASE = process.env.REACT_APP_API_URL;
 
+console.log(API_BASE)
 
 
 export const registerUser = async (formData) => {
