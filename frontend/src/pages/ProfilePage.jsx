@@ -234,8 +234,8 @@ const ProfilePage = () => {
   // ✅ Load from backend
   useEffect(() => {
     const fetchProfile = async () => {
-      try {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}:5000/api/profile/${userId}`)
+      try {''
+        const res = await fetch("https://first-node-app-repo.onrender.com:5000/api/profile/${userId}")
                     // await fetch(`http://localhost:5000/api/profile/${userId}`)
 
         const data = await res.json();
@@ -273,7 +273,7 @@ const ProfilePage = () => {
   const handleSave = async () => {
     try {
       //  await fetch(`http://localhost:5000/api/profile/${userId}`, {
-          await fetch(`${process.env.REACT_APP_API_URL}/api/profile/${userId}`, {
+          await fetch("https://first-node-app-repo.onrender.com/api/profile/${userId}", {
 
         method: "PUT",
         headers: {
