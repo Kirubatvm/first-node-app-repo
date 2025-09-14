@@ -4,7 +4,7 @@ const API_BASE = "https://first-node-app-repo.onrender.com";
 
 
 export const registerUser = async (formData) => {
-  const res = await fetch(`${API_BASE}/auth/api/register`,{
+  const res = await fetch(`${API_BASE}/api/auth/register`,{
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
