@@ -1,5 +1,5 @@
 // src/api/auth.js
-const API_BASE = "https://first-node-app-repo.onrender.com";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 console.log(API_BASE)
 
