@@ -7,17 +7,23 @@ export const register = async (req, res) => {
 
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
+    console.log(name)
+    console.log(email)
+    console.log(password)
 
     const result = await db.query(
       "INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *",
       [name, email, hashedPassword]
     );
 
+    console.log("insert done")
+
     res.status(201).json({
       message: "User registered successfully",
       user: result.rows[0],
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json({ error: "Registration failed", details: err.message });
   }
 };
