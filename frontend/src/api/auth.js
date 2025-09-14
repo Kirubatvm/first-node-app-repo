@@ -1,5 +1,5 @@
 // src/api/auth.js
-const API_BASE = "https://frontend-app-omwb.onrender.com";
+const API_BASE = "https://first-node-app-repo.onrender.com";
 
 console.log(API_BASE)
 
