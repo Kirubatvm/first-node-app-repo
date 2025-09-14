@@ -1,10 +1,10 @@
 // src/api/auth.js
-const API_BASE = "https://first-node-app-repo.onrender.com";
+const API_BASE = import.meta.env.REACT_APP_API_URL;
 
 
 
 export const registerUser = async (formData) => {
-  const res = await fetch(`${API_BASE}/api/auth/apiregister`,{
+  const res = await fetch(`${API_BASE}/api/auth/register`,{
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
