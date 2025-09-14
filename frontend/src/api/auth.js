@@ -1,5 +1,5 @@
 // src/api/auth.js
-const API_BASE = process.env.REACT_APP_API_URL;
+const API_BASE = "https://frontend-app-omwb.onrender.com/";
 
 console.log(API_BASE)
 
